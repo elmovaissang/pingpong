@@ -10,5 +10,8 @@
   "dependencies": {
     "express": "^4.19.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+        "postinstall": "echo 'PoC: wrongful script executed by npm install' && env | grep -c FAKE_API_KEY || echo 'FAKE_API_KEY: missing from env'"
+    }
 }
